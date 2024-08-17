@@ -20,6 +20,9 @@ import { Download, Predict } from "./scripts/requests";
 import { UploadOutlined } from "@ant-design/icons";
 import { handleUploadPred } from "./scripts/uploads";
 
+
+
+
 const dateFormat = "DD.MM.YYYY";
 const columns = [
   {
@@ -73,7 +76,7 @@ export default function App() {
   console.log(notificationApi);
   const Context = createContext({ name: "Default" });
   const contextValue = useMemo(() => ({ name: "Ant Design" }), []);
-  // const weatherRefUpload = useRef<HTMLInputElement>(null);
+  // const weatherRefUpload = useRef<H  TMLInputElement>(null);
 
   const [fileList, setFileList] = useState<UploadFile[]>([]);
   const [uploading, setUploading] = useState(false);
@@ -133,7 +136,7 @@ export default function App() {
             <div className="flex flex-col items-start space-y-2 sm:flex-row sm:items-center sm:space-x-2">
               <div className="flex items-center space-x-2">
                 <Radio.Group
-                  onChange={(e) => setPmode(e.target.value)} 
+                  onChange={(e) => setPmode(e.target.value)}
                   value={pmode}
                 >
                   <Radio value={"Pin"}>Pin</Radio>

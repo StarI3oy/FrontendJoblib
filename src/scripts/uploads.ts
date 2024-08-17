@@ -17,7 +17,7 @@ export const handleUploadPred = (
   setUploadingPred(true);
   setSend(false);
   // You can use any AJAX library you like
-  fetch("/datasets/upload_predict", {
+  fetch("http://127.0.0.1:8000/datasets/upload_predict", {
     method: "POST",
     body: formData,
   })
@@ -48,7 +48,7 @@ export const handleUploadWeather = (
   });
   setUploadingWeather(true);
   // You can use any AJAX library you like
-  fetch("/datasets/upload_predict", {
+  fetch("http://127.0.0.1:8000/datasets/upload_predict", {
     method: "POST",
     body: formData,
   })

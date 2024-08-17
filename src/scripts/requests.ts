@@ -13,7 +13,7 @@ export function Predict(
   setLoadingPredict(true);
 
   fetch(
-    "/model/predict?ks=" +
+    "http://127.0.0.1:8000/model/predict?ks=" +
       ks +
       "&pmode=" +
       pmode +
@@ -65,7 +65,7 @@ export function Download(
   myHeaders.append("Content-Type", "application/octet-stream");
   myHeaders.append("Content-Disposition", 'filename="result.xlsx"');
   fetch(
-    "/results/download?ks=" +
+    "http://127.0.0.1:8000/results/download?ks=" +
       ks +
       "&pmode=" +
       pmode +
@@ -96,7 +96,7 @@ export function Upload(
   const formdata = new FormData();
   formdata.append("file", fil_);
 
-  fetch("/upload?ks=15&pmode=Pin&hours=48h", {
+  fetch("http://127.0.0.1:8000/upload?ks=15&pmode=Pin&hours=48h", {
     method: "POST",
     body: formdata,
     redirect: "follow",
